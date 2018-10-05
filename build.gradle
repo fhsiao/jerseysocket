@@ -17,6 +17,9 @@ repositories {
 }
 
 dependencies {
+
+    compile('com.bettercloud:vault-java-driver:3.1.0')
+    
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
 
     compile "javax.ws.rs:jsr311-api:1.1.1"

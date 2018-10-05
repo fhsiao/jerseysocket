@@ -32,6 +32,20 @@
         <url-pattern>/rest/db/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>jerseyVault</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.charter.jerseysocket.vault</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jerseyVault</servlet-name>
+        <url-pattern>/rest/vault/*</url-pattern>
+    </servlet-mapping>
+
     <resource-ref>
         <description>mysql8 connection</description>
         <res-ref-name>jdbc/example</res-ref-name>
