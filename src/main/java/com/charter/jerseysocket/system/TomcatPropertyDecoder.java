@@ -1,4 +1,4 @@
-package com.charter.jerseysocket;
+package com.charter.jerseysocket.system;
 
 import com.bettercloud.vault.VaultException;
 import com.charter.jerseysocket.vault.VaultClient;
