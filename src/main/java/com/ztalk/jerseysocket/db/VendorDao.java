@@ -1,4 +1,4 @@
-package com.charter.jerseysocket.db;
+package com.ztalk.jerseysocket.db;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -11,10 +11,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDao {
-    public List<User> getDBUsers() throws NamingException, SQLException {
+public class VendorDao {
+    public List<Vendor> getDBVendors() throws NamingException, SQLException {
 
-        ArrayList<User> userList = new ArrayList<>();
+        ArrayList<Vendor> vendorList = new ArrayList<>();
 
         Context initContext = null;
         {
@@ -26,22 +26,22 @@ public class UserDao {
         }
         DataSource ds = null;
         {
-            ds = (DataSource) envContext.lookup("jdbc/test");
+            ds = (DataSource) envContext.lookup("jdbc/mysql");
         }
         {
             Connection conn = ds.getConnection();
 
             Statement statement = conn.createStatement();
-            String sql = "select * from example";
+            String sql = "select * from vendors";
 
             ResultSet rset = statement.executeQuery(sql);  // Send the query to the server
 
             int count = 0;
             while (rset.next()) {
-                userList.add(new User(count,rset.getString("name"),"Engineer"));
+                vendorList.add(new Vendor(count,rset.getString("VENDOR_ID"),"VENDOR_NAME"));
                 ++count;
             }
         }
-        return userList;
+        return vendorList;
     }
 }

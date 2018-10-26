@@ -1,4 +1,4 @@
-package com.charter.jerseysocket.db;
+package com.ztalk.jerseysocket.db;
 
 import org.apache.log4j.Logger;
 
@@ -10,15 +10,14 @@ import javax.ws.rs.core.MediaType;
 import java.sql.SQLException;
 import java.util.List;
 
-@Path("users")
-public class UserResource {
-    private static final Logger logger = Logger.getLogger(UserResource.class);
+@Path("vendors")
+public class VendorResource {
+    private static final Logger logger = Logger.getLogger(VendorResource.class);
     private static final long serialVersionUID = 1L;
-    UserDao userDao = new UserDao();
+    VendorDao vendorDao = new VendorDao();
     @GET
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public List<User> getDBUsers() throws SQLException, NamingException {
-        //return userDao.getAllUsers();
-        return userDao.getDBUsers();
+    public List<Vendor> getDBUsers() throws SQLException, NamingException {
+        return vendorDao.getDBVendors();
     }
 }

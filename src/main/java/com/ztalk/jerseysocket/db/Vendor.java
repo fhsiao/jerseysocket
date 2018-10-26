@@ -1,21 +1,21 @@
-package com.charter.jerseysocket.db;
+package com.ztalk.jerseysocket.db;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
-@XmlRootElement(name = "user")
-public class User implements Serializable {
+@XmlRootElement(name = "vendor")
+public class Vendor implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
     private String name;
-    private String profession;
-    public User(){}
+    private String type;
+    public Vendor(){}
 
-    public User(int id, String name, String profession){
+    public Vendor(int id, String name, String type){
         this.id = id;
         this.name = name;
-        this.profession = profession;
+        this.type = type;
     }
     public int getId() {
         return id;
@@ -31,11 +31,11 @@ public class User implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public String getProfession() {
-        return profession;
+    public String getType() {
+        return type;
     }
     @XmlElement
-    public void setProfession(String profession) {
-        this.profession = profession;
+    public void setType(String type) {
+        this.type = type;
     }
 }

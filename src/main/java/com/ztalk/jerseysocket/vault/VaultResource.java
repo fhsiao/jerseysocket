@@ -1,4 +1,4 @@
-package com.charter.jerseysocket.vault;
+package com.ztalk.jerseysocket.vault;
 
 
 import com.bettercloud.vault.VaultException;
@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("vault")
+@Path("getvault")
 public class VaultResource {
     private static final Logger logger = Logger.getLogger(VaultResource.class);
 

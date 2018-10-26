@@ -9,7 +9,7 @@
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>com.charter.jerseysocket.hello</param-value>
+            <param-value>com.ztalk.jerseysocket.hello</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
@@ -17,27 +17,27 @@
         <servlet-name>jersey</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
-
+    <!-- ######################################################################### -->
     <servlet>
         <servlet-name>jerseyDB</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>com.charter.jerseysocket.db</param-value>
+            <param-value>com.ztalk.jerseysocket.db</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>jerseyDB</servlet-name>
-        <url-pattern>/rest/db/*</url-pattern>
+        <url-pattern>/rest/db/users/*</url-pattern>
     </servlet-mapping>
-
+    <!-- ######################################################################### -->
     <servlet>
         <servlet-name>jerseyVault</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>com.charter.jerseysocket.vault</param-value>
+            <param-value>com.ztalk.jerseysocket.vault</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
@@ -45,10 +45,24 @@
         <servlet-name>jerseyVault</servlet-name>
         <url-pattern>/rest/vault/*</url-pattern>
     </servlet-mapping>
-
+    <!-- ######################################################################### -->
+    <servlet>
+        <servlet-name>jerseyVendor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.ztalk.jerseysocket.db</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jerseyVendor</servlet-name>
+        <url-pattern>/rest/db/vendors/*</url-pattern>
+    </servlet-mapping>
+    <!-- ######################################################################### -->
     <resource-ref>
         <description>mysql8 connection</description>
-        <res-ref-name>jdbc/example</res-ref-name>
+        <res-ref-name>jdbc/mysql</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
     </resource-ref>

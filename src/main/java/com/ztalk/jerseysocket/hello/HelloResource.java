@@ -1,17 +1,13 @@
-package com.charter.jerseysocket.hello;
+package com.ztalk.jerseysocket.hello;
 
 import org.apache.log4j.Logger;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import javax.xml.bind.JAXBElement;
-import java.util.ArrayList;
-import java.util.List;
 
 @Path("hello")
 public class HelloResource {
     private static final Logger logger = Logger.getLogger(HelloResource.class);
-
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

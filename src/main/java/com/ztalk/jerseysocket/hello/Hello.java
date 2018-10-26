@@ -1,4 +1,4 @@
-package com.charter.jerseysocket.hello;
+package com.ztalk.jerseysocket.hello;
 
 import org.apache.log4j.Logger;
 
