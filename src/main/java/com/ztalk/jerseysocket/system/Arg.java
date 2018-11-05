@@ -1,7 +1,8 @@
 package com.ztalk.jerseysocket.system;
 
 import org.apache.commons.cli.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.Properties;
 
 public class Arg {
 
-    private static final Logger logger = Logger.getLogger(Arg.class);
+    private static final Logger logger = LogManager.getLogger();
     private static String resourceName;
     private String[] args = null;
     private Options options = new Options();
@@ -158,7 +159,7 @@ public class Arg {
  * Auther: Frank
  */
 class RelaxedParser extends DefaultParser {
-    private static final Logger logger = Logger.getLogger(Arg.class);
+    private static final Logger logger = LogManager.getLogger();
     @Override
     public CommandLine parse(Options options, String[] arguments) throws ParseException {
         List<String> knownArguments = new ArrayList<>();

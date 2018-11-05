@@ -1,13 +1,14 @@
 package com.ztalk.jerseysocket.hello;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Hello {
 
-    private static final Logger logger = Logger.getLogger(Hello.class);
+    private static final Logger logger = LogManager.getLogger();
     private String id;
     private String summary;
     private String description;

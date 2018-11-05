@@ -4,11 +4,12 @@ import com.bettercloud.vault.Vault;
 import com.bettercloud.vault.VaultConfig;
 import com.bettercloud.vault.VaultException;
 import com.ztalk.jerseysocket.system.PROP;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class VaultClient {
     private static final long serialVersionUID = 1L;
-    private static final Logger logger = Logger.getLogger(VaultClient.class);
+    private static final Logger logger = LogManager.getLogger(VaultClient.class);
     /**
      * Send a request to Vault server according to the default properties from vault.properties file
      *

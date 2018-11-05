@@ -1,6 +1,7 @@
 package com.ztalk.jerseysocket.system;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.security.InvalidParameterException;
@@ -16,7 +17,7 @@ import java.util.Properties;
  */
 public class PROP {
     static private final long serialVersionUID = 1L;
-    static private final Logger logger = Logger.getLogger(PROP.class);
+    static private final Logger logger = LogManager.getLogger();
     static private final HashMap<String, String> globalPropMap = new HashMap<>();
     static private final HashMap<String, HashMap<String,String>> resourceMap = new HashMap<>();
 

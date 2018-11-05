@@ -1,6 +1,7 @@
 package com.ztalk.jerseysocket.db;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.naming.NamingException;
 import javax.ws.rs.GET;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Path("vendors")
 public class VendorResource {
-    private static final Logger logger = Logger.getLogger(VendorResource.class);
+    private static final Logger logger = LogManager.getLogger();
     private static final long serialVersionUID = 1L;
     VendorDao vendorDao = new VendorDao();
     @GET
