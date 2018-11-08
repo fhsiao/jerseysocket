@@ -64,5 +64,9 @@ Add commons-cli-1.4.jar to ${TOMCAT_HOME}/lib
 
 If the ROOT is applied in the ${TOMCAT_HOME}/webapps,
 
+Vault:
 http://{host_ip}/tomcat-vault/vault/getVault is used to test password responded back from your Vault server.
+
+Websocket:
+http://{IP}:{PORT}/jerseysocket/
 
